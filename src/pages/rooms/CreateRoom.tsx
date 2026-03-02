@@ -34,29 +34,31 @@ function CreateRoom() {
     };
 
     return (
-        <C.HeaderWrapper>
-            <PageHeader 
-                title="Your Room" 
-                subtitle={`Ready to start a meeting, ${user?.email}?`} 
-            />
-            
-            <div style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
-                <input 
-                    type="text" 
-                    placeholder="Enter Room Name (e.g. Daily-Standup)" 
-                    value={roomName}
-                    onChange={(e) => setRoomName(e.target.value)}
-                    style={{ padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
+        <div className="page">
+            <C.HeaderWrapper>
+                <PageHeader 
+                    title="Your Room" 
+                    subtitle={`Ready to start a meeting, ${user?.email}?`} 
                 />
-                <Button 
-                    variant="primary" 
-                    onClick={handleCreateRoom}
-                    disabled={loading}
-                >
-                    {loading ? 'Creating...' : 'Create & Join'}
-                </Button>
-            </div>
-        </C.HeaderWrapper>
+                
+                <div style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
+                    <input 
+                        type="text" 
+                        placeholder="Enter Room Name (e.g. Daily-Standup)" 
+                        value={roomName}
+                        onChange={(e) => setRoomName(e.target.value)}
+                        style={{ padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
+                    />
+                    <Button 
+                        variant="primary" 
+                        onClick={handleCreateRoom}
+                        disabled={loading}
+                    >
+                        {loading ? 'Creating...' : 'Create & Join'}
+                    </Button>
+                </div>
+            </C.HeaderWrapper>
+        </div>
     );
 }
 

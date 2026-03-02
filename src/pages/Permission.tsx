@@ -87,7 +87,7 @@ function Permission() {
 
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='page'>
       <h2>Media Permissions (LiveKit)</h2>
 
       {status !== 'granted' ? (

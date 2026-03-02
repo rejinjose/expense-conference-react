@@ -37,7 +37,7 @@ export default function ActiveRoom() {
   if (token === "") return <div>Verifying Credentials...</div>;
 
   return (
-    <div style={{ height: '100vh' }}>
+    <div className='page' style={{ height: '100vh' }}>
       <LiveKitRoom
         video={true}
         audio={true}

@@ -1,3 +1,115 @@
 .page-wrapper {
+  padding: 0px;
+}
+
+.page {
   padding: 20px;
+}
+
+/* Container to prevent horizontal scroll */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Flexbox Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+/* Column Base Styles */
+[class*="col-"] {
+  padding: 0 15px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Column Widths */
+.col-1  { flex: 0 0 8.33%;  max-width: 8.33%; }
+.col-2  { flex: 0 0 16.66%; max-width: 16.66%; }
+.col-3  { flex: 0 0 25%;    max-width: 25%; }
+.col-4  { flex: 0 0 33.33%; max-width: 33.33%; }
+.col-5  { flex: 0 0 41.66%; max-width: 41.66%; }
+.col-6  { flex: 0 0 50%;    max-width: 50%; }
+.col-7  { flex: 0 0 58.33%; max-width: 58.33%; }
+.col-8  { flex: 0 0 66.66%; max-width: 66.66%; }
+.col-9  { flex: 0 0 75%;    max-width: 75%; }
+.col-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+.col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+.col-12 { flex: 0 0 100%;   max-width: 100%; }
+
+.pad-top-60 {
+  padding-top: 60px;
+}
+
+.pad-top-30 {
+  padding-top: 30px;
+}
+
+.pad-bottom-60 {
+  padding-bottom: 60px;
+}
+
+.pad-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.mar-top-60 {
+  margin-top: 60px;
+}
+
+.mar-top-30 {
+  margin-top: 30px;
+}
+
+.mar-bottom-60 {
+  margin-bottom: 60px;
+}
+
+.mar-bottom-30 {
+  margin-bottom: 30px;
+}
+
+
+/* Mobile responsiveness: Stack columns below 768px */
+@media (max-width: 768px) {
+  [class*="col-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Dynamic grid for video participants */
+.video-grid {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  height: 600px; /* Adjust as needed */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.video-tile {
+  background: #2c2c2c;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.text-center {
+  text-align: center;
 }

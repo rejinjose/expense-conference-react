@@ -41,7 +41,7 @@ function Expenses() {
     };
 
   return (
-    <>
+    <div className="page">
       <C.HeaderWrapper>
         <PageHeader title="Your Expenses" subtitle={`View your expenses, ${user?.email}.`} />
         <Button variant="primary" onClick={() => setIsModalOpen(true)}>Create Expense</Button>     
@@ -105,7 +105,7 @@ function Expenses() {
           />
         )}
       </Modal>
-    </>
+    </div>
   );
 }
 

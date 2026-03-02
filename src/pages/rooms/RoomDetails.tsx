@@ -49,7 +49,7 @@ function RoomDetails() {
     const isHost = user?.uid === room.hostId;
 
     return (
-        <div style={{ padding: '20px' }}>
+        <div className='page'>
             <h1>{room.roomName}</h1>
             <p><strong>Created:</strong> {room.createdAt?.toDate().toLocaleString()}</p>
             <p><strong>Host:</strong> {room.hostEmail}</p>

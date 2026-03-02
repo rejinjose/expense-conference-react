@@ -35,7 +35,7 @@ function RoomsList() {
   }, [user]);
 
   return (
-    <>
+    <div className='page'>
       <C.HeaderWrapper>
         <PageHeader
           title="Your Room List"
@@ -62,7 +62,7 @@ function RoomsList() {
           </ul>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

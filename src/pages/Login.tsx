@@ -65,46 +65,48 @@ const AuthForm = () => {
   };
 
   return (
-    <FormContainer data-name="loginSignupForm">
-      <FormBox>
-        <Title>{isLogin ? 'Login' : 'Sign Up'}</Title>
-        <StyledForm onSubmit={handleSubmit}>
-          <Input 
-            name="email"
-            type="email" 
-            placeholder="Email" 
-            value={formData.email}
-            onChange={handleChange}
-            required 
-          />
-          <Input 
-            name="password"
-            type="password" 
-            placeholder="Password" 
-            value={formData.password}
-            onChange={handleChange}
-            required 
-          />
-          <SubmitButton type="submit" disabled={isSubmitting}>
-            {isSubmitting ? 'Processing...' : (isLogin ? 'Sign In' : 'Register')}
-          </SubmitButton>
-        </StyledForm>
-        
-        <ToggleText>
-          {isLogin ? (
-            <>
-              Not a registered user? 
-              <ToggleButton onClick={() => setIsLogin(false)} disabled={isSubmitting}>signup</ToggleButton>
-            </>
-          ) : (
-            <>
-              Already have an account? 
-              <ToggleButton onClick={() => setIsLogin(true)} disabled={isSubmitting}>login</ToggleButton>
-            </>
-          )}
-        </ToggleText>
-      </FormBox>
-    </FormContainer>
+    <div className='page'>
+      <FormContainer data-name="loginSignupForm">
+        <FormBox>
+          <Title>{isLogin ? 'Login' : 'Sign Up'}</Title>
+          <StyledForm onSubmit={handleSubmit}>
+            <Input 
+              name="email"
+              type="email" 
+              placeholder="Email" 
+              value={formData.email}
+              onChange={handleChange}
+              required 
+            />
+            <Input 
+              name="password"
+              type="password" 
+              placeholder="Password" 
+              value={formData.password}
+              onChange={handleChange}
+              required 
+            />
+            <SubmitButton type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Processing...' : (isLogin ? 'Sign In' : 'Register')}
+            </SubmitButton>
+          </StyledForm>
+          
+          <ToggleText>
+            {isLogin ? (
+              <>
+                Not a registered user? 
+                <ToggleButton onClick={() => setIsLogin(false)} disabled={isSubmitting}>signup</ToggleButton>
+              </>
+            ) : (
+              <>
+                Already have an account? 
+                <ToggleButton onClick={() => setIsLogin(true)} disabled={isSubmitting}>login</ToggleButton>
+              </>
+            )}
+          </ToggleText>
+        </FormBox>
+      </FormContainer>
+    </div>
   );
 };
 
